@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하루네컷</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+  
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .head{
+      display: inline-block;
+      width: 700px;
+      height: 130px;
+      top: 0;
+      box-shadow: 0 0 40px rgba(103, 79, 79, 0.6);
+      background-color: white;
+    }
+    .title{
+      text-align: center;
+    }
+    .title label{
+      font-size: 70px;
+      font-family: 'Nanum Pen Script', cursive;
+    } 
+    .title a{
+     color: rgb(106, 131, 243);
+    }
+    .title p{
+      font-size: 33px;
+      font-family: 'Nanum Pen Script', cursive;  
+    }
+    .title p:hover{
+        color: rgb(68, 68, 68);
+    }
+    .right{
+      display: flex;
+      font-size: 35px;
+      font-family: 'Nanum Pen Script', cursive;
+      margin-left: 68%;
+      position: absolute;
+      margin-top: -50px;
+      list-style: none;
+    }
+    .right li{
+      margin-right: 50px;
+    }
+    a{  
+      text-decoration: none;
+      color: black;
+    }
+    p{
+        color: black;
+    }
+    a:hover{
+      color: tomato;
+    }
+    #camera{
+      display: block;
+    }
+    .button-2 {
+      position: relative;
+      left: 220px;
+      top: 30px;
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  margin-left: 20px;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+    .result_s{
+      float: right;
+      position: relative;
+      bottom: 530px;
+      width:1200px;
+      height: 1640px;
+      border: 1px solid black;
+      text-align: center;
+    }
+    .btn{
+       width: 35px;
+       height:35px;
+       display: inline-block;
+       border-radius: 50%;
+       margin: 20px 20px;
+       border: none;
+     color: rgb(106, 131, 243);
+       box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+    }
+    #btn-area{
+      position: relative;
+      top: 150px;
+      left: 80px;
+    }
+    #home_btn{
+  margin: 20px;
+  width: 40px;
+  height: 40px;
+  position:fixed;
+  top: 980px;
+}
+#c{
+position: relative;
+top: 30px;
+left: 10px;
+animation-name: move1;
+animation-duration: 2s;
+}
+#tip{
+  position: relative;
+  bottom: 285px;
+  left: 350px;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="head">
+  
+    <div class="title">
+      <label><a href="홈_로그인후.html">하루네컷</a></label>
+      <p>나만의 개성 넘치는 사진들을 만들어보세요!</p> 
+  </div>
+  <div class="right">
+  </div>
+</div>
+<div id="camera"></div>
+
+<button class="button-2" role="button"><a href="#"  onclick="snapshot1()">snapshot</a></button>
+<button class="button-2" role="button"><a href="사진찍기.html">retry</a></button>
+
+<div class="result_s">
+  <div id="result1"></div>
+  <div id="result2"></div>
+  <div id="result3"></div>
+  <div id="result4"></div>
+</div>
+
+<div style="margin-top: 30px; position: relative; right: 60px;">
+  <button class="button-2" id="choose_color" role="button"><a href="사진찍기.html">색상배경선택</a></button>
+  <button class="button-2" id="choose_tip" role="button"><a href="사진찍기.html">네컷배경선택</a></button>
+</div>
+
+<div id="c">
+  <div class="color">
+    <a href="#" class="btn" id="btn1" onclick="c1()" style="background: ivory;"></a>
+    <a href="#" class="btn" id="btn2" onclick="c2()" style="background: peachpuff;"></a>
+    <a href="#" class="btn" id="bnt3" onclick="c3()" style="background: #fffcbb"></a>
+    <a href="#" class="btn" id="btn4" onclick="c4()" style="background: #b0bce0;"></a>
+  </div>
+  <div class="color">
+    <a href="#" class="btn" id="btn7" onclick="c5()" style="background: #F4BDD0;"></a>
+    <a href="#" class="btn" id="btn8" onclick="c6()" style="background: lavender;"></a>
+    <a href="#" class="btn" id="bnt9" onclick="c7()" style="background: #cfffe5;"></a>
+    <a href="#" class="btn" id="btn10" onclick="c8()" style="background:skyblue;"></a>
+  </div>
+  <div class="color">
+    <a href="#" class="btn" id="btn13" onclick="c9()" style="background:#c28285;"></a>
+  <a href="#" class="btn" id="btn14" onclick="c10()" style="background: #d0c4ab;"></a>
+  <a href="#" class="btn" id="bnt15" onclick="c11()" style="background: #0ccccc;" ></a>
+  <a href="#" class="btn" id="btn16" onclick="c12()" style="background: #003458;" ></a>
+</div>
+<div class="color">
+  <a href="#" class="btn" id="btn19" onclick="c13()" style="background: #d3d3d3;" ></a>
+  <a href="#" class="btn" id="btn20" onclick="c14()" style="background: #4169e1;"></a>
+  <a href="#" class="btn" id="bnt21" onclick="c15()" style="background: #881824;"></a>
+  <a href="#" class="btn" id="btn22" onclick="c16()" style="background: black;"></a>
+</div>
+</div>
+<div id="tip" >
+  <div>
+    <a href="#" class="btn" onclick="t1()"></a>
+    <a href="#" class="btn" onclick="t2()"></a>
+    <a href="#" class="btn" onclick="t3()"></a>
+  </div>
+  <div>
+  <a href="#" class="btn" onclick="t4()"></a>
+  <a href="#" class="btn" onclick="t5()"></a>
+  <a href="#" class="btn" onclick="t6()"></a>
+  </div>
+</div>
+
+
+
+<a href="홈.html"><img src="img/홈버튼.jpg" id="home_btn" alt="홈버튼"></a>
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+<script>
+     function t1(){
+       document.querySelector('.result_s').style.backgroundImage="url(https://post-phinf.pstatic.net/MjAyMDA2MjZfMTY2/MDAxNTkzMTMxMDU1NzU3.8zONhg8UgXp6NnDOWDtSDiLnlfG64vzfIH3s9WT8Ccgg.ZAizCpEQW19Ck66bmTQwFGC38sVgrXPG4owuCrrqBWwg.PNG/%EC%9D%B8%EC%83%9D%EB%84%A4%EC%BB%B7_%ED%8F%AC%EC%A6%88_%EC%B6%94%EC%B2%9C_%EC%B9%9C%EA%B5%AC_%EC%BB%A4%ED%94%8C%281%29.png?type=w1200)";
+     }
+     function t2(){
+       document.querySelector('.result_s').style.backgroundImage="url(https://post-phinf.pstatic.net/MjAyMDA2MjZfMTgw/MDAxNTkzMTMxMDc0NDIz.XGmubD8kjLGvUDXUVa6YlWwnbpTAzF-_c9Unj0pVZmAg.O0rdgotg3Rxz1FEmyNX5TmZPGlq7jEuIPQkrXcpgYvQg.PNG/%EC%9D%B8%EC%83%9D%EB%84%A4%EC%BB%B7_%ED%8F%AC%EC%A6%88_%EC%B6%94%EC%B2%9C_%EC%B9%9C%EA%B5%AC_%EC%BB%A4%ED%94%8C%282%29.png?type=w1200)";
+     }
+     function t3(){
+       document.querySelector('.result_s').style.backgroundImage="url(https://post-phinf.pstatic.net/MjAyMDA2MjZfMTI4/MDAxNTkzMTMxMDkyNjgz.-16ldg_1Q03aVAgjnOjYIzGxox7ctPwbkEhfqMbsu2sg.QOrv7THCAcopDrciqHkNxf1riiunX2AM93S3HIdkwbYg.PNG/%EC%9D%B8%EC%83%9D%EB%84%A4%EC%BB%B7_%ED%8F%AC%EC%A6%88_%EC%B6%94%EC%B2%9C_%EC%B9%9C%EA%B5%AC_%EC%BB%A4%ED%94%8C%283%29.png?type=w1200)";
+     }
+     function t4(){
+       document.querySelector('.result_s').style.backgroundImage="url(https://post-phinf.pstatic.net/MjAyMDA2MjZfMjQ1/MDAxNTkzMTMxMTI2OTgy.5FTU8Ts89C4d-esahj2SOU0LvpcgL6Y6SOE2iPR1hFEg.O3lNwQq3deohQtxpT65Sa1MJofUcOWSrJaPjdeobdQgg.PNG/%EC%9D%B8%EC%83%9D%EB%84%A4%EC%BB%B7_%ED%8F%AC%EC%A6%88_%EC%B6%94%EC%B2%9C_%EC%B9%9C%EA%B5%AC_%EC%BB%A4%ED%94%8C%284%29.png?type=w1200)";
+     }
+     function t5(){
+       document.querySelector('.result_s').style.backgroundImage="url(https://post-phinf.pstatic.net/MjAyMDA2MjZfMTUx/MDAxNTkzMTMxMTQ5NzMx.hmk4wuPMZr9ekS208_5mkxnpCWiaVi0H23zXzxGAs54g.xUAJpjxaj0NCD-If5MKQoEcqqBUKT0jsdGZE5mlPco4g.PNG/%EC%9D%B8%EC%83%9D%EB%84%A4%EC%BB%B7_%ED%8F%AC%EC%A6%88_%EC%B6%94%EC%B2%9C_%EC%B9%9C%EA%B5%AC_%EC%BB%A4%ED%94%8C%285%29.png?type=w1200)";
+     }
+     function t6(){
+       document.querySelector('.result_s').style.backgroundImage="url(https://post-phinf.pstatic.net/MjAyMDA2MjZfMjM2/MDAxNTkzMTMxMTY4MjQ1.uL1G9jh6DF0DiqkpI2cXJAtcMkRtwTxGIpSxaoMg6tEg.ezxiSxQpOO-ai66d0OUdc_sOIGMm2YpEs7n39m-jwRsg.PNG/%EC%9D%B8%EC%83%9D%EB%84%A4%EC%BB%B7_%ED%8F%AC%EC%A6%88_%EC%B6%94%EC%B2%9C_%EC%B9%9C%EA%B5%AC_%EC%BB%A4%ED%94%8C%286%29.png?type=w1200)";
+     }
+      
+
+    function c1(){
+      document.querySelector('.result_s').style.backgroundColor='ivory';
+      }
+    function c2(){
+      document.querySelector('.result_s').style.backgroundColor='peachpuff';
+      }
+    function c3(){
+      document.querySelector('.result_s').style.backgroundColor='#fffcbb';
+      }
+    function c4(){
+      document.querySelector('.result_s').style.backgroundColor='#b0bce0';
+      }
+    //
+      function c5(){
+      document.querySelector('.result_s').style.backgroundColor='#F4BDD0';
+      }
+    function c6(){
+      document.querySelector('.result_s').style.backgroundColor='lavender';
+      }
+    function c7(){
+      document.querySelector('.result_s').style.backgroundColor='#cfffe5';
+      }
+    function c8(){
+      document.querySelector('.result_s').style.backgroundColor='skyblue';
+      }
+      //
+      function c9(){
+      document.querySelector('.result_s').style.backgroundColor='#c28285';
+      }
+    function c10(){
+      document.querySelector('.result_s').style.backgroundColor='#d0c4ab';
+      }
+    function c11(){
+      document.querySelector('.result_s').style.backgroundColor='#0ccccc';
+      }
+    function c12(){
+      document.querySelector('.result_s').style.backgroundColor='#003458';
+      }
+      //
+      function c13(){
+      document.querySelector('.result_s').style.backgroundColor='#d3d3d3';
+      }
+    function c14(){
+      document.querySelector('.result_s').style.backgroundColor='#4169e1';
+      }
+    function c15(){
+      document.querySelector('.result_s').style.backgroundColor='#881824';
+      }
+    function c16(){
+      document.querySelector('.result_s').style.backgroundColor='black';
+      }
+   
+   //webcam
+
+     Webcam.set({
+            width:700,
+            height:400,
+            image_format:'jpg',
+            jpg_quality:90
+        })      
+        Webcam.attach('#camera')   
+
+        var cnt = 1;
+
+        function snapshot1(){
+            Webcam.snap(function(data_uri){
+                document.getElementById('result'+cnt).innerHTML =
+                '<img src="'+data_uri+'"/>';
+            });
+            cnt++;
+        }
+        
+</script>
+</html>

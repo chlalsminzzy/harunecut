@@ -1,0 +1,200 @@
+<DOCTYPE HTML5>
+    <html>
+      <head>
+          <title>하루네컷_회원가입</title>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+
+}
+
+body {
+  background-image: #34495e;
+}
+
+.loginForm {
+  position:absolute;
+  width:500px;
+  height:400px;
+  padding: 30px, 20px;
+  background-color:#FFFFFF;
+  text-align:center;
+  bottom: 250px;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 15px;
+}
+
+.loginForm label{
+  text-align: center;
+  margin: 30px;
+  font-size: 70px;
+  color: rgb(106, 131, 243);
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.item{
+  border-bottom: 2px solid #adadad;
+  margin: 20px;
+  padding: 10px 10px;
+  
+}
+
+
+.id {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:30px;
+  height:35px;
+  background: none;
+}
+
+.pw {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:26px;
+  height:35px;
+  background: none;
+}
+.birth{
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:28px;
+  height:35px;
+  background: none;
+}
+
+.btn {
+  position:relative;
+  left:40%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-radius: 2%;
+  width:80%;
+  height:40px;
+  background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+  background-position: left;
+  background-size: 200%;
+  color:white;
+  font-weight: bold;
+  border:none;
+  cursor:pointer;
+  transition: 0.4s;
+  display:inline;
+}
+
+.btn:hover {
+  background-position: right;
+}
+
+.bottomText {
+  text-align: center;
+}
+.bottomText a{
+    text-decoration: none;
+    color: blue;
+}
+a{
+  text-decoration: none;
+}
+img{
+  margin: 20px;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 980px;
+}
+        </style>
+      </head>
+
+      <body width="100%" height="100%">
+        <a href="홈.html"><img src="img/홈버튼.jpg" alt="홈버튼"></a>
+        <form  method="post" class="loginForm" name="loginForm">
+          <label>회원가입</label>
+          <div class="item">
+            <input type="text" class="id" placeholder="아이디" style="font-family: 'Nanum Pen Script', cursive;" name="id">
+          </div>
+          <div class="item">
+            <input type="password" class="pw" placeholder="비밀번호" style="font-family: 'Nanum Pen Script', cursive;" name="pw">
+          </div>
+          <div class="item">
+            <input type="password" class="pw" placeholder="비밀번호확인" style="font-family: 'Nanum Pen Script', cursive;" name="pwck">
+          </div>
+          <div class="item">
+            <input type="text" class="id" placeholder="사용자 이름" style="font-family: 'Nanum Pen Script', cursive;" name="username">
+          </div>
+          <div class="item">
+            <input type="text" class="birth" placeholder="생일 (ex '0401')" style="font-family: 'Nanum Pen Script', cursive;" name="birthday">
+          </div>
+          <button type="button" class="btn" onclick="a()"  style="font-family: 'Nanum Pen Script', cursive; font-size: 22px;">
+            Sign up!
+          </button>
+      
+        </div>
+         
+        </form>
+        <script>
+           function a(){
+            var result=b();
+            if(result){
+                alert("가입되었습니다");
+                location.replace("홈_로그인후.html")
+            }
+        }
+        function b(){
+            if(!c(document.loginForm.id, "아이디")){
+                return false;
+            }
+            if(!c(document.loginForm.pw, "비밀번호")){
+                return false;
+            }
+            if(!d()){
+                return false;
+            }
+            if(!c(document.loginForm.pw, "비밀번호")){
+                return false;
+            }
+            if(!c(document.loginForm.username, "사용자 이름")){
+                return false;
+            }
+            if(!c(document.loginForm.birthday, "생일")){
+                return false;
+            }
+            return true;
+        }
+        function c(field,name){
+            var value=field.value;
+            if(value.length==0){
+                alert(name +"를 입력하세요");
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+        function d(){
+            var pw = document.loginForm.pw.value;
+            var pwck = document.loginForm.pwck.value;
+            if(pw!=pwck){
+                alert("비번을 확인하세요");
+                return false;
+            }
+            else{
+                return true;
+            }
+
+
+        }
+        </script>
+      </body>
+    </html>

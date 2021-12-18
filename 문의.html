@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하루네컷_문의</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .head{
+      width: 100%;
+      height: 130px;
+      top: 0;
+      box-shadow: 0 0 40px rgba(103, 79, 79, 0.6);
+      background-color: white;
+    }
+    .title{
+     text-align: center;
+     color: tomato;
+    }
+    .title label{
+      font-size: 70px;
+      font-family: 'Nanum Pen Script', cursive;
+    } 
+    .title p{
+      font-size: 33px;
+      font-family: 'Nanum Pen Script', cursive;  
+    }
+    .right{
+      font-size: 38px;
+      font-family: 'Nanum Pen Script', cursive;
+      margin-left: 70%;
+      position: absolute;
+      margin-top: -50px;
+      list-style: none;
+      display: flex;
+    }
+    .right li{
+      margin-right: 30px;
+    }
+    a{  
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color: tomato;
+    }
+
+    .body{
+      width: 40rem;
+      height: 40rem;
+      margin-top: 5rem;
+      border: 1px solid black;
+      position: absolute;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+    select {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .item{
+      color: black;
+      text-align: center;
+    }
+    textarea {
+      margin-top: 10px;
+      width: 500px;
+      height: 300px;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .button-2 {
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  color: #3d3d3d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 620;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  margin-top: 100px;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+  </style>
+  <script>
+    function button(){
+    alert("제출 되었습니다.")
+    }
+  </script>
+</head>
+<body>
+<div class="head">
+    <div class="title">
+      <a href="홈_로그인후.html"><label>하루네컷</label></a>
+      <p>나만의 개성 넘치는 사진들을 만들어보세요</p> 
+  </div>
+  <div class="right">
+  <a href="홈_로그인후.html"><li>로그아웃</li></a>
+    <a href="갤러리.html"><li>갤러리</li></a>
+    <a href="이달의사진.html"><li>이달의 사진들</li>
+    <a href="문의.html"><li style="color: tomato;">문의</li></a>
+  </div>
+</div>
+<div class="body">
+  <div class="item">
+    <label>문의할 주제를 선택해주세요</label>
+    <br />
+    <select name="moon2">
+      <option>로그인 관련 문제</option>
+      <option>웹 관련 오류</option>
+      <option>기타</option>
+    </select>
+  </div>
+  <div class="item">
+    <label>문의 사항을 적어주세요</label>
+    <br />
+    <textarea name="t" placeholder="자세한 문의 사항을 적어주세요"></textarea>
+    <br />
+   <!-- style="padding: 5px; margin-top: 1.5rem;" -->
+  <button class="button-2" role="button" onclick="button()">제출</button>
+  </div>
+</div>
+</body>
+</html>

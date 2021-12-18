@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하루네컷</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    
+  
+    .head{
+      width: 100%;
+      height: 130px;
+      top: 0;
+      box-shadow: 0 0 40px rgba(103, 79, 79, 0.6);
+      background-color: white;
+    }
+    .title{
+     text-align: center;
+     color: rgb(106, 131, 243);
+    }
+    .title label{
+      font-size: 70px;
+      font-family: 'Nanum Pen Script', cursive;
+    } 
+    .title p{
+      font-size: 33px;
+      font-family: 'Nanum Pen Script', cursive;  
+    }
+    .title p:hover{
+        color: rgb(68, 68, 68);
+    }
+    .left{
+      
+      font-size: 38px;
+      font-family: 'Nanum Pen Script', cursive;
+     float: left;
+     margin-left: 30px;
+      position: absolute;
+      margin-top: -50px;
+      list-style: none;
+      display: flex;
+    
+    }
+    .right{
+      font-size: 38px;
+      font-family: 'Nanum Pen Script', cursive;
+      margin-left: 68%;
+      position: absolute;
+      margin-top: -50px;
+      list-style: none;
+      display: flex;
+    }
+    .right li{
+      margin-right: 30px;
+    }
+    a{  
+      text-decoration: none;
+      color: black;
+    }
+    p{
+        color: black;
+    }
+    a:hover{
+      color: tomato;
+    }
+   .middle{
+    width: 100%;
+   }
+    .con{
+      /* width: 300vw; */
+      transition: transform 1.8s;
+      text-align: center;
+      display:inline-flex;
+         
+    }
+    .inner{
+      width: 100vw;
+      float: left;
+    } 
+     
+    .btn{
+       width: 35px;
+       height:35px;
+       display: inline-block;
+       border-radius: 50%;
+       margin: 20px 30px;
+       border: none;
+       background-color: rgb(106, 131, 243);
+       box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+    }
+    #btn-area{
+      position: relative;
+      left: 38%;
+    }
+    .inner img{
+       width: 90%;
+    }
+    
+    .img-eogud {
+      margin-top: 40px;
+      width: 900px;
+      height: 770px;
+    }
+    .button-53 {
+  background-color: #3DD1E7;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 60%;
+  max-width: 250px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-53:focus {
+  outline: 0;
+}
+
+.button-53:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button-53:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-53 {
+    padding: .75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+    
+
+  </style>
+</head>
+
+<body>
+  
+
+<div class="head">
+    <div class="title">
+      <label>하루네컷</label>
+      <p>나만의 개성 넘치는 사진들을 만들어보세요!</p> 
+  </div>
+  <div class="left">
+    <a href="#" onclick="alert('로그인 후 사용가합니다.')">사진찍으로가기</a>
+  </div>
+  <div class="right">
+    <li> <a href="회원가입.html" target="_blank">회원가입</a> </li>
+    <li> <a href="로그인.html" target="_blank">로그인</a></li>
+    <a href="#"><li onclick="alert('로그인 후 사용가합니다.')">갤러리</li></a>
+    <a href="#"><li onclick="alert('로그인 후 사용가합니다.')">이달의 사진들</li>
+    <a href="#"><li onclick="alert('로그인 후 사용가합니다.')">문의</li>
+  </div>
+</div>
+<!-- header -->
+<a href="사진찍기.html"><button class="button-53" role="button">당장 찍으로가기</button></a>
+
+
+<div class="middle" style="overflow: hidden;">
+  
+  <div class="con">
+    <div class="inner">
+        <img class="img-eogud" src="img/img1.png">
+    </div>
+    <div class="inner">
+        <img class="img-eogud" src="img/img2.png">
+    </div>
+    <div class="inner">
+        <img class="img-eogud" src="img/img3.png">
+    </div>
+    <div class="inner">
+        <img class="img-eogud" src="img/img4.png">
+    </div>
+    <div class="inner">
+        <img class="img-eogud" src="img/img5.png">
+    </div>
+ </div>
+
+
+<div id="btn-area">
+  <a href="#" class="btn" onclick="a()"></a>
+  <a href="#" class="btn" onclick="b()"></a>
+  <a href="#" class="btn" onclick="c()"></a>
+  <a href="#" class="btn" onclick="d()"></a>
+  <a href="#" class="btn" onclick="e()"></a>
+</div>
+
+</div>
+
+
+
+</body>
+
+<script>
+    function a(){
+           document.querySelector('.con').style.transform = 'translate(0vw)';
+       }
+       function b(){
+           document.querySelector('.con').style.transform = 'translate(-100vw)';
+       }
+       function c(){
+           document.querySelector('.con').style.transform = 'translate(-200vw)';
+       }
+       function d(){
+           document.querySelector('.con').style.transform = 'translate(-300vw)';
+       }
+       function e(){
+           document.querySelector('.con').style.transform = 'translate(-400vw)';
+       }
+</script>
+</html>
